@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<head>
+  <title></title> Expense Manager</title>
+
+ 
+</head>
+<body>
+    <form action="?addexpense" method="POST">
+      <input type="date" name = "date" id=" date">
+      <input type = "text" name ="expensename" id="expensename">
+      <input type="text" name="amount" id="amount">
+      <seelct name = "catagory" id="category">
+        <option value="food">Food</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="transportation">Transportation</option>
+        <option value="rent">Rent</option>
+        <option value="other">Other</option>
+      
+      </select>
+      <input type="submit" value="Add" id="">
+    </form>
+
+</body>
 </html>
