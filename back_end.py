@@ -3,7 +3,8 @@ from trace import Trace
 from turtle import back
 from unicodedata import category
 from flask import Flask, render_template, request, redirect
-import flask_sqlalchemy import SQLAlchemy
+import flask_sqlalchemy 
+import SQLAlchemy
 import os
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
