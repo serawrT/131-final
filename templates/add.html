@@ -1,9 +1,8 @@
 {% extends 'main.html' %} 
 {% block body %}
-
-  let store = [];
   <script>
     function gatherData() {
+      let store = [];
       store.push(document.getElementById("date").value);
       store.push(document.getElementById("expensename").value);
       store.push(document.getElementById("amount").value);
@@ -12,11 +11,23 @@
     }
   </script>
 
+  <style>
+    body {
+      background-color: aquamarine;
+      border: 2px solid aquamarine;
+      padding: 30px;
+    }
+
+    div {
+      margin: auto;
+    }
+    
+  </style>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
         <h3>Add expense</h3>
-        
+        <form action="/addexpense" method="POST">
           <div class="form-group">
             <label for="">Date</label>
             <input type="date" name="date" id="date" />
@@ -40,9 +51,9 @@
             </select>
           </div>
           <input type="submit" value="Add" onclick="gatherData()" />
+          <input type="submit" value="Convert" onclick="gatherData()" />
         </form>
       </div>
     </div>
   </div>
-
 {% endblock %}
