@@ -14,19 +14,33 @@
   <style>
     body {
       background-color: aquamarine;
-      border: 2px solid aquamarine;
-      padding: 30px;
+      /*border: 2px solid aquamarine;*/
+      /*padding: 30px;*/
+      display: grid;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+      font-size: x-large;
+      letter-spacing: 0.05cm;
+      font-stretch: condensed;
     }
 
     div {
       margin: auto;
+    }
+
+    h3 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    label {
+      font-family: cursive;
     }
     
   </style>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3>Add expense</h3>
+        <h3>EXPENSE MANAGER</h3>
         <form action="/addexpense" method="POST">
           <div class="form-group">
             <label for="">Date</label>
