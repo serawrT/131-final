@@ -1,13 +1,23 @@
 {% extends 'main.html' %} 
 {% block body %}
   <script>
+    let storage = new Map();
+    let counter = 0;
     function gatherData() {
       let store = [];
       store.push(document.getElementById("date").value);
       store.push(document.getElementById("expensename").value);
-      store.push(document.getElementById("amount").value);
+      if(document.getElementById("amount").value > 0) {
+        store.push(document.getElementById("amount").value);
+      }
+      else {
+        console.log(document.getElementById("amount").value + " is not a valid expense amount");
+      }
+      //store.push(document.getElementById("amount").value);
       store.push(document.getElementById("category").value);
-      console.log(store);
+      storage.set(counter, store);
+      counter++;
+      console.log(storage);
     }
   </script>
 
@@ -41,7 +51,7 @@
     <div class="row">
       <div class="col-md-6">
         <h3>EXPENSE MANAGER</h3>
-        <form action="/addexpense" method="POST">
+          <form action="/addexpense" method="POST">
           <div class="form-group">
             <label for="">Date</label>
             <input type="date" name="date" id="date" />
